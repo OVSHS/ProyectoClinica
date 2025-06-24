@@ -42,7 +42,7 @@ bool validarCorreo(const string &correo)
 
 bool validarGenero(const string &genero)
 {
-    vector<string> generosValidos = {"Masculino", "Femenino", "Otro"};
+    vector<string> generosValidos = {"Masculino", "Femenino"};
     return find(generosValidos.begin(), generosValidos.end(), genero) != generosValidos.end();
 }
 
@@ -411,10 +411,10 @@ public:
 
         do
         {
-            solicitarCampo("Genero (Masculino/Femenino/Otro)", gen);
+            solicitarCampo("Genero (Masculino/Femenino)", gen);
             if (!validarGenero(gen))
             {
-                cout << "Genero invalido. Opciones validas: Masculino, Femenino, Otro.\n";
+                cout << "Genero invalido. Opciones validas: Masculino, Femenino.\n";
             }
         } while (!validarGenero(gen));
 
